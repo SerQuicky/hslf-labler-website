@@ -1,0 +1,505 @@
+/* ----------------------- Header design ----------------------- */
+
+.page-header {
+    height: 110px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 15% 40px 1fr;
+
+    .page-header-image {
+        grid-area: 1 / 2 / 2 / 3;
+
+        img {
+            height: 25px;
+            width: 25px;
+            display: block;
+            padding-top: 15px;
+            margin: 10px 0;
+        }
+    }
+
+    .page-header-text {
+        grid-area: 1 / 3 / 2 / 4;
+
+        span {
+            font-size: 22px;
+            display: block;
+            padding-top: 25px;
+        }
+    }
+}
+
+/* ----------------------- Content design ----------------------- */
+
+span {
+    font-family: Roboto;
+}
+
+.linear-gradient {
+    position: absolute;
+    width: 1468.11px;
+    height: 663.7px;
+    left: 100.62px;
+    top: 829.71px;
+
+    background: linear-gradient(144.86deg, #6688ff 27.98%, rgba(255, 102, 130, 0) 80.3%);
+    transform: rotate(-141deg);
+}
+
+.polygon-1 {
+    position: absolute;
+    width: 734.87px;
+    height: 734.87px;
+    left: -300px;
+    top: 1400px;
+    transform: rotate(-1.1deg);
+}
+
+.polygon-2 {
+    position: absolute;
+    width: 237.07px;
+    height: 237.07px;
+    left: 90%;
+    top: 1134.32px;
+    transform: rotate(-9.39deg);
+}
+
+.polygon-3 {
+    position: absolute;
+    width: 343.91px;
+    height: 343.91px;
+    left: 85%;
+    top: 1176.08px;
+    transform: rotate(-5.24deg);
+}
+
+.polygon-4 {
+    position: absolute;
+    width: 451.28px;
+    height: 451.28px;
+    left: 90%;
+    top: 1251.87px;
+    transform: rotate(-126.56deg);
+}
+
+.vector-1 {
+    position: absolute;
+    left: 695px;
+    top: 0px;
+    width: 1468.11px;
+    height: 663.7px;
+}
+
+.labler-screenshot {
+    position: absolute;
+    width: 700px;
+    height: 462px;
+    /* left: 1063px; */
+    left: calc(100vw - 45%);
+    top: 221px;
+    z-index: 3;
+
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    transform: matrix(1, 0.12, 0, 0.99, 0, 0);
+}
+
+.page-content {
+    padding-top: 110px;
+    width: 100%;
+    height: 1800px;
+
+    position: relative;
+}
+
+/* ----------------------- Person section ----------------------- */
+
+.labler-container {
+    height: calc(100vh - 200px);
+    display: grid;
+    grid-template-columns: 60% 1fr;
+
+    .labler-text-holder {
+        width: 430px;
+        height: 375px;
+        display: grid;
+        grid-template-rows: 50% 1fr 30%;
+        padding-top: 5%;
+        margin: 0 auto;
+
+        .labler-main-text {
+            font-size: 48px;
+            font-weight: 700;
+            float: left;
+        }
+
+        .labler-description {
+            font-weight: 400;
+            font-size: 15px;
+            float: left;
+        }
+    }
+}
+
+.labler-documentation-button {
+    div {
+        width: 140px;
+        height: 40px;
+        background: #ff3364;
+        border-radius: 20px;
+        text-align: center;
+        cursor: pointer;
+
+        span {
+            color: #fafafc;
+            display: block;
+            font-size: 14px;
+            font-weight: 400;
+            padding-top: 12px;
+        }
+    }
+}
+
+/* ----------------------- Arrow down animation ----------------------- */
+
+.labler-boxes {
+    height: 800px;
+    display: grid;
+    width: 100%;
+    grid-template-columns: 10% 1fr 1fr 1fr 10%;
+    z-index: 3;
+
+    .labler-info-box {
+        width: 310px;
+        height: 250px;
+        display: grid;
+        grid-template-rows: 1fr 2fr 1fr;
+
+        background: #ffffff;
+        box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.03);
+        border-radius: 30px;
+
+        div {
+            span {
+                padding-top: 25px;
+                display: block;
+                padding-left: 30px;
+                padding-right: 30px;
+                text-align: left;
+            }
+        }
+
+        .box-header {
+            span {
+                color: #313131;
+                font-weight: bold;
+                font-size: 24px;
+            }
+        }
+
+        .box-description {
+            span {
+                color: #404040;
+                font-weight: normal;
+                font-size: 14px;
+            }
+        }
+
+        .box-button {
+            width: 140px;
+            height: 40px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+            border-radius: 23px;
+            margin-left: 30px;
+
+            span {
+                color: #fafafc;
+                font-weight: normal;
+                font-size: 14px;
+                padding-top: 12px;
+                padding-left: 0px;
+                padding-right: 0px;
+                text-align: center;
+            }
+        }
+    }
+
+    .first-box {
+        grid-area: 1 / 2 / 2 / 3;
+        margin: 25% auto;
+
+        .box-button {
+            background: #ff3364;
+        }
+    }
+
+    .second-box {
+        grid-area: 1 / 3 / 2 / 4;
+        margin: 50% auto;
+
+        .box-button {
+            background: #ff9533;
+        }
+    }
+
+    .third-box {
+        grid-area: 1 / 4 / 2 / 5;
+        margin: 75% auto;
+
+        .box-button {
+            background: #3733ff;
+        }
+    }
+
+    .labler-box-background {
+        grid-area: 1 / 1 / 2 / 6;
+
+        img {
+            width: 600px;
+            height: 400px;
+            display: block;
+            margin: 10% auto;
+        }
+    }
+}
+
+.page-labler-footer {
+    height: 100px;
+    width: 100%;
+    border-top: 3px solid #f3f5f9;
+
+    .labler-footer-logo {
+        width: 100px;
+        height: 100px;
+        display: grid;
+        grid-template-rows: 1fr 25%;
+        float: right;
+        margin-right: 100px;
+
+        img {
+            display: block;
+            margin: 20px auto;
+            width: 70px;
+            height: 70px;
+        }
+    }
+}
+
+/* ----------------------------------------------------------------
+
+                        HD-Laptop-Layout
+
+---------------------------------------------------------------- */
+
+@media (min-width: 1400px) and (max-width: 1500px) {
+    .page-content {
+        padding-top: 110px;
+        width: 100%;
+        height: 3000px;
+    }
+
+    .labler-screenshot {
+        left: 900px !important;
+    }
+}
+
+/* ----------------------------------------------------------------
+
+                        MD-Laptop-Layout
+
+---------------------------------------------------------------- */
+
+@media (min-width: 1280px) and (max-width: 1400px) {
+    .page-content {
+        padding-top: 110px;
+        width: 100%;
+        height: 2800px;
+    }
+
+    .labler-screenshot {
+        left: 750px !important;
+    }
+
+    .page-labler-footer {
+        grid-template-columns: 25% 1fr 20% 20% !important;
+    }
+}
+
+/* ----------------------------------------------------------------
+
+                        Tablet-Layouts
+
+---------------------------------------------------------------- */
+
+@media (min-width: 1024px) and (max-width: 1366px) and (orientation: landscape) {
+    .page-header {
+        grid-template-columns: 7.5% 25% 1fr 25% 7.5%;
+    }
+}
+
+@media (min-height: 1024px) and (max-height: 1366px) and (orientation: portrait) {
+    .page-header {
+        grid-template-columns: 5% 15% 50% 5%;
+    }
+
+    .fixed-scroll-header {
+        height: 80px !important;
+    }
+
+    .labler-container {
+        grid-template-columns: 1fr !important;
+        grid-template-rows: 30% 1fr !important;
+        height: calc(100vh - 325px) !important;
+
+        span {
+            font-size: 18px;
+            text-align: center !important;
+        }
+
+        div {
+            .labler-text-holder {
+                height: 250px;
+                width: 95% !important;
+                padding-top: 5%;
+                margin: 0 auto !important;
+                float: none;
+
+                .labler-main-text {
+                    font-size: 35px;
+                }
+
+                .labler-description {
+                    font-size: 25px;
+                }
+            }
+        }
+
+        .labler-screenshot {
+            left: 375px !important;
+            top: 500px !important;
+        }
+    }
+
+    .page-labler-footer {
+        height: 350px;
+    }
+
+    .page-labler-footer {
+        grid-template-columns: 25% 1fr 20% 20% !important;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    .page-content {
+        height: 2800px;
+    }
+
+    .page-header {
+        grid-template-columns: 5% 15% 55% 5%;
+    }
+
+    .fixed-scroll-header {
+        height: 80px !important;
+    }
+
+    .labler-container {
+        grid-template-columns: 1fr !important;
+        grid-template-rows: 30% 1fr !important;
+        height: calc(100vh + 125px) !important;
+
+        span {
+            font-size: 18px;
+            text-align: center !important;
+        }
+
+        div {
+            .labler-text-holder {
+                height: 250px;
+                width: 95% !important;
+                padding-top: 5%;
+                margin: 0 auto !important;
+                float: none;
+
+                .labler-main-text {
+                    font-size: 35px;
+                }
+
+                .labler-description {
+                    font-size: 25px;
+                }
+            }
+        }
+
+        .labler-screenshot {
+            left: 375px !important;
+            top: 500px !important;
+        }
+    }
+
+    .page-labler-footer {
+        height: 200px;
+    }
+
+    .page-labler-footer {
+        grid-template-columns: 25% 1fr 20% 20% !important;
+    }
+}
+
+/* ----------------------------------------------------------------
+
+                        Mobile-Layouts
+
+---------------------------------------------------------------- */
+
+@media only screen and (min-width: 414px) and (max-width: 768px) and (orientation: portrait) {
+    .page-content {
+        height: 2800px;
+    }
+
+    .page-header {
+        grid-template-columns: 5% 15% 60% 5%;
+    }
+
+    .labler-container {
+        grid-template-columns: 1fr !important;
+        grid-template-rows: 30% 1fr !important;
+        height: calc(100vh + 125px) !important;
+        width: 100%;
+
+        span {
+            font-size: 18px;
+            text-align: center !important;
+        }
+
+        div {
+            .labler-text-holder {
+                height: 250px;
+                width: 95% !important;
+                padding-top: 5%;
+                margin: 0 auto !important;
+                float: none;
+
+                .labler-main-text {
+                    font-size: 30px;
+                }
+
+                .labler-description {
+                    font-size: 20px;
+                }
+            }
+        }
+
+        .labler-screenshot {
+            left: 375px !important;
+            top: 500px !important;
+        }
+    }
+
+    .page-labler-footer {
+        height: 200px;
+    }
+
+    .page-labler-footer {
+        grid-template-columns: 25% 1fr 20% 20% !important;
+    }
+}
