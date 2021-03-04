@@ -19,7 +19,6 @@ export class AppComponent {
 
   @HostListener('window:resize', ['$event'])
   onResize(event) {
-    alert(window.innerWidth);
     this.smallScreen = window.innerWidth < 1200;
   }
 }
