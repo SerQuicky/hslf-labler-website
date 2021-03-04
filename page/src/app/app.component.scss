@@ -1,10 +1,18 @@
+@import "styles/polygons.scss";
+@import "styles/boxes.scss";
+
+
+span {
+    font-family: "Roboto";
+}
+
 /* ----------------------- Header design ----------------------- */
 
 .page-header {
     height: 110px;
     width: 100%;
     display: grid;
-    grid-template-columns: 15% 40px 1fr;
+    grid-template-columns: 10% 40px 1fr;
 
     .page-header-image {
         grid-area: 1 / 2 / 2 / 3;
@@ -29,62 +37,23 @@
     }
 }
 
-/* ----------------------- Content design ----------------------- */
+.page-content {
+    padding-top: 110px;
+    width: 100%;
+    height: 1800px;
 
-span {
-    font-family: "Roboto";
-}
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: hidden;
 
-.polygon-1 {
-    position: absolute;
-    width: 734.87px;
-    height: 734.87px;
-    left: -300px;
-    top: 1400px;
-    transform: rotate(-1.1deg);
-}
-
-.polygon-2 {
-    position: absolute;
-    width: 237.07px;
-    height: 237.07px;
-    left: 90%;
-    top: 1134.32px;
-    transform: rotate(-9.39deg);
-}
-
-.polygon-3 {
-    position: absolute;
-    width: 343.91px;
-    height: 343.91px;
-    left: 85%;
-    top: 1176.08px;
-    transform: rotate(-5.24deg);
-}
-
-.polygon-4 {
-    position: absolute;
-    width: 451.28px;
-    height: 451.28px;
-    left: 90%;
-    top: 1251.87px;
-    transform: rotate(-126.56deg);
-}
-
-.vector-1 {
-    position: absolute;
-    left: 395px;
-    top: 0px;
-    width: 1868.11px;
-    height: 863.7px;
 }
 
 .labler-screenshot {
     position: absolute;
-    width: 750px;
-    height: 462px;
-    left: calc(100vw - 50%);
-    top: 221px;
+    width: calc(100vw / 2.8);
+    height: calc(100vh / 2.68);
+    left: calc(100vw / 2);
+    top: calc(100vh / 5.6);
     z-index: 3;
 
     box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
@@ -92,190 +61,96 @@ span {
     transform: matrix(1, 0.12, 0, 0.99, 0, 0);
 }
 
-.page-content {
-    padding-top: 110px;
-    width: 100%;
-    height: 1800px;
-
-    position: relative;
-}
-
-/* ----------------------- Person section ----------------------- */
-
 .labler-container {
-    height: calc(100vh - 200px);
+    height: calc(100vh / 2);
     display: grid;
-    grid-template-columns: 60% 1fr;
+    grid-template-columns: 50% 1fr;
 
     .labler-text-holder {
-        width: 430px;
-        height: 375px;
+        width: calc(100vw / 4);
+        height: calc(100vh / 3.5);
         display: grid;
-        grid-template-rows: 50% 1fr 30%;
+        grid-template-rows: 40% 1fr 30%;
         padding-top: 5%;
         margin: 0 auto;
 
         .labler-main-text {
-            font-size: 48px;
+            font-size: calc(100vh / 26);
             font-weight: 700;
             float: left;
         }
 
         .labler-description {
             font-weight: 400;
-            font-size: 15px;
+            font-size: calc(100vh / 60);
             float: left;
         }
-    }
-}
 
-.labler-documentation-button {
-    div {
-        width: 140px;
-        height: 40px;
-        background: #ff3364;
-        border-radius: 20px;
-        text-align: center;
-        cursor: pointer;
-
-        span {
-            color: #fafafc;
-            display: block;
-            font-size: 14px;
-            font-weight: 400;
-            padding-top: 12px;
-        }
-    }
-}
-
-/* ----------------------- Arrow down animation ----------------------- */
-
-.labler-boxes {
-    height: 800px;
-    display: grid;
-    width: 100%;
-    grid-template-columns: 10% 1fr 1fr 1fr 10%;
-    z-index: 3;
-
-    .labler-info-box {
-        width: 310px;
-        height: 250px;
-        display: grid;
-        grid-template-rows: 1fr 2fr 1fr;
-
-        background: #ffffff;
-        box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.03);
-        border-radius: 30px;
-
-        div {
-            span {
-                padding-top: 25px;
-                display: block;
-                padding-left: 30px;
-                padding-right: 30px;
-                text-align: left;
-            }
-        }
-
-        .box-header {
-            span {
-                color: #313131;
-                font-weight: bold;
-                font-size: 24px;
-            }
-        }
-
-        .box-description {
-            span {
-                color: #404040;
-                font-weight: normal;
-                font-size: 14px;
-            }
-        }
-
-        .box-button {
-            width: 140px;
-            height: 40px;
-            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
-            border-radius: 23px;
-            margin-left: 30px;
-
-            span {
-                color: #fafafc;
-                font-weight: normal;
-                font-size: 14px;
-                padding-top: 12px;
-                padding-left: 0px;
-                padding-right: 0px;
+        .labler-documentation-button {
+            div {
+                width: calc(100vw / 14);
+                height: calc(100vh / 30);
+                background: #ff3364;
+                border-radius: 20px;
                 text-align: center;
+                cursor: pointer;
+        
+                span {
+                    color: #fafafc;
+                    display: block;
+                    font-size: calc(100vh / 75);
+                    font-weight: 400;
+                    padding-top: calc(100vh / 105);
+                }
             }
         }
     }
-
-    .first-box {
-        grid-area: 1 / 2 / 2 / 3;
-        margin: 25% auto;
-
-        .box-button {
-            background: #ff3364;
-        }
-    }
-
-    .second-box {
-        grid-area: 1 / 3 / 2 / 4;
-        margin: 50% auto;
-
-        .box-button {
-            background: #ff9533;
-        }
-    }
-
-    .third-box {
-        grid-area: 1 / 4 / 2 / 5;
-        margin: 75% auto;
-
-        .box-button {
-            background: #3733ff;
-        }
-    }
-
-    .labler-box-background {
-        grid-area: 1 / 1 / 2 / 6;
-
-        img {
-            width: 600px;
-            height: 400px;
-            display: block;
-            margin: 10% auto;
-        }
-    }
 }
-
 
 //                        HD-Laptop-Layout
 // ----------------------------------------------------------------
 
 @media (min-width: 1400px) and (max-width: 1500px) {
-    .labler-screenshot {
-        width: 570px;
-        height: 380px;
-    }
-
     .page-content {
         height: 1500px;
     }
 
-    .vector-1 {
-        position: absolute;
-        left: 0px;
-        top: 0px;
-        width: 1868.11px;
-        height: 863.7px;
+    .labler-container {
+        height: calc(100vh / 1.5);
+    
+        .labler-text-holder {
+            width: calc(100vw / 4);
+            height: calc(100vh / 2.5);
+            grid-template-rows: 40% 1fr 30%;
+            padding-top: 5%;
+    
+            .labler-main-text {
+                font-size: calc(100vh / 26);
+            }
+    
+            .labler-description {
+                font-size: calc(100vh / 50);
+            }
+
+            .labler-documentation-button {
+                div {
+                    width: calc(100vw / 10);
+                    height: calc(100vh / 25);
+            
+                    span {
+                        font-size: calc(100vh / 60);
+                        padding-top: calc(100vh / 105);
+                    }
+                }
+            }
+        }
     }
 
-    .polygon-1 {
-        height: 334.87px;
-        top: 1300px;
+    .labler-screenshot {
+        width: calc(100vw / 2.8);
+        height: calc(100vh / 2.68);
+        left: calc(100vw / 2);
+        top: calc(100vh / 3.5);
     }
 }
 
@@ -283,26 +158,46 @@ span {
 // ---------------------------------------------------------------- 
 
 @media (min-width: 1280px) and (max-width: 1400px) {
-    .labler-screenshot {
-        width: 520px;
-        height: 350px;
-    }
-
     .page-content {
         height: 1400px;
     }
 
-    .vector-1 {
-        position: absolute;
-        left: 0px;
-        top: 0px;
-        width: 1868.11px;
-        height: 863.7px;
+    .labler-container {
+        height: calc(100vh / 1.5);
+    
+        .labler-text-holder {
+            width: calc(100vw / 4);
+            height: calc(100vh / 2.5);
+            grid-template-rows: 40% 1fr 30%;
+            padding-top: 5%;
+    
+            .labler-main-text {
+                font-size: calc(100vh / 26);
+            }
+    
+            .labler-description {
+                font-size: calc(100vh / 50);
+            }
+
+            .labler-documentation-button {
+                div {
+                    width: calc(100vw / 10);
+                    height: calc(100vh / 25);
+            
+                    span {
+                        font-size: calc(100vh / 60);
+                        padding-top: calc(100vh / 105);
+                    }
+                }
+            }
+        }
     }
 
-    .polygon-1 {
-        height: 334.87px;
-        top: 1300px;
+    .labler-screenshot {
+        width: calc(100vw / 3);
+        height: calc(100vh / 4);
+        left: calc(100vw / 2);
+        top: calc(100vh / 3.5);
     }
 }
 
@@ -313,9 +208,10 @@ span {
 @media (min-width: 1024px) and (max-width: 1366px) and (orientation: landscape) {
 
     .labler-screenshot {
-        width: 660px;
-        height: 400px;
-        left: calc(100vw - 55%);
+        width: calc(100vw / 2.5);
+        height: calc(100vh / 3);
+        left: calc(100vw / 2);
+        top: calc(100vh / 4);
     }
 
     .labler-container {
@@ -325,6 +221,10 @@ span {
 }
 
 @media (min-height: 1024px) and (max-height: 1366px) and (orientation: portrait) {
+    .page-content {
+        height: 2000px;
+    }
+
     .page-header { 
         height: 50px;
     }
@@ -333,47 +233,41 @@ span {
         height: calc(100vh - 200px);
         display: grid;
         width: 100%;
+    }
+
+    .labler-container {
+        height: calc(100vh / 2);
         grid-template-columns: 1fr;
-    }
-
-    .labler-screenshot {
-        width: 660px;
-        height: 400px;
-        left: calc(100vw - 80%);
-        top: 725px;
-    }
-
-    .labler-boxes {
-        height: 800px;
-        display: grid;
-        width: 100%;
-        grid-template-columns: 0% 1fr 1fr 1fr 0%;
-        z-index: 3;
-    }
-
-    .polygon-1 {
-        height: 334.87px;
-        top: 1800px;
-    }
     
-    .polygon-2 {
-        top: 1234.32px;
-    }
+        .labler-text-holder {
+            width: calc(100vw / 1.5);
+            height: calc(100vh / 3.5);
+            grid-template-rows: 40% 1fr 30%;
+            padding-top: 5%;
+            margin: 0 auto;
     
-    .polygon-3 {
-        top: 1276.08px;
-    }
+            .labler-main-text {
+                font-size: calc(100vh / 26);
+                font-weight: 700;
+                float: left;
+            }
     
-    .polygon-4 {
-        top: 1351.87px;
-    }
-
-    .vector-1 {
-        position: absolute;
-        left: 0px;
-        top: 0px;
-        width: 1868.11px;
-        height: 863.7px;
+            .labler-description {
+                font-size: calc(100vh / 60);
+            }
+    
+            .labler-documentation-button {
+                div {
+                    width: calc(100vw / 5);
+                    height: calc(100vh / 30);
+            
+                    span {
+                        font-size: calc(100vh / 75);
+                        padding-top: calc(100vh / 105);
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -382,51 +276,43 @@ span {
         height: 50px;
     }
 
+    .page-content {
+        height: 1000px;
+    }
+
     .labler-container {
-        height: calc(100vh + 400px);
-        display: grid;
-        width: 100%;
+        height: calc(100vh / 2);
         grid-template-columns: 1fr;
-    }
-
-    .labler-screenshot {
-        width: 660px;
-        height: 400px;
-        left: calc(100vw - 80%);
-        top: 725px;
-    }
-
-    .labler-boxes {
-        height: 800px;
-        display: grid;
-        width: 100%;
-        grid-template-columns: 0% 1fr 1fr 1fr 0%;
-        z-index: 3;
-    }
-
-    .polygon-1 {
-        height: 334.87px;
-        top: 1800px;
-    }
     
-    .polygon-2 {
-        top: 1234.32px;
-    }
+        .labler-text-holder {
+            width: calc(100vw / 2.25);
+            height: calc(100vh / 3.5);
+            grid-template-rows: 40% 1fr 30%;
+            padding-top: 5%;
+            margin: 0 auto;
     
-    .polygon-3 {
-        top: 1276.08px;
-    }
+            .labler-main-text {
+                font-size: calc(100vh / 26);
+                font-weight: 700;
+                float: left;
+            }
     
-    .polygon-4 {
-        top: 1351.87px;
-    }
-
-    .vector-1 {
-        position: absolute;
-        left: 0px;
-        top: 0px;
-        width: 1868.11px;
-        height: 863.7px;
+            .labler-description {
+                font-size: calc(100vh / 45);
+            }
+    
+            .labler-documentation-button {
+                div {
+                    width: calc(100vw / 7);
+                    height: calc(100vh / 27.5);
+            
+                    span {
+                        font-size: calc(100vh / 70);
+                        padding-top: calc(100vh / 105);
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -435,56 +321,41 @@ span {
         height: 50px;
     }
 
+    .page-content {
+        height: 1000px;
+    }
+
     .labler-container {
-        height: calc(100vh + 100px);
-        display: grid;
-        width: 100%;
+        height: calc(100vh / 2);
         grid-template-columns: 1fr;
-    }
-
-    .labler-screenshot {
-        width: 660px;
-        height: 400px;
-        left: calc(100vw - 92.5%);
-        top: 725px;
-    }
-
-    .labler-boxes {
-        height: 800px;
-        display: grid;
-        width: 100%;
-        grid-template-columns: 0% 1fr 1fr 1fr 0%;
-        z-index: 3;
-
-        .labler-info-box {
-            width: 230px;
-            height: 250px;
+    
+        .labler-text-holder {
+            width: calc(100vw / 2.25);
+            height: calc(100vh / 2.5);
+            grid-template-rows: 40% 1fr 30%;
+            padding-top: 5%;
+            margin: 0 auto;
+    
+            .labler-main-text {
+                font-size: calc(100vh / 26);
+            }
+    
+            .labler-description {
+                font-size: calc(100vh / 45);
+            }
+    
+            .labler-documentation-button {
+                div {
+                    width: calc(100vw / 5);
+                    height: calc(100vh / 27.5);
+            
+                    span {
+                        font-size: calc(100vh / 70);
+                        padding-top: calc(100vh / 105);
+                    }
+                }
+            }
         }
-    }
-
-    .polygon-1 {
-        height: 334.87px;
-        top: 1600px;
-    }
-    
-    .polygon-2 {
-        top: 1284.32px;
-    }
-    
-    .polygon-3 {
-        top: 1276.08px;
-    }
-    
-    .polygon-4 {
-        top: 1351.87px;
-    }
-
-    .vector-1 {
-        position: absolute;
-        left: -200px;
-        top: 0px;
-        width: 1868.11px;
-        height: 863.7px;
     }
 }
 
@@ -494,76 +365,44 @@ span {
 
 ---------------------------------------------------------------- */
 
-@media only screen and (min-width: 414px) and (max-width: 768px) and (orientation: portrait) {
+@media only screen and (min-width: 414px) and (max-width: 767px) and (orientation: portrait) {
     .page-header { 
         height: 50px;
     }
+    .page-content {
+        height: 1500px;
+    }
 
     .labler-container {
-        height: calc(100vh + 100px);
-        display: grid;
-        width: 100%;
+        height: calc(100vh / 2);
         grid-template-columns: 1fr;
-
+    
         .labler-text-holder {
-            width: 90%;
-            height: 375px;
-            display: grid;
-            grid-template-rows: 50% 1fr 30%;
+            width: calc(100vw / 1.5);
+            height: calc(100vh / 2.5);
+            grid-template-rows: 40% 1fr 30%;
             padding-top: 5%;
             margin: 0 auto;
+    
+            .labler-main-text {
+                font-size: calc(100vh / 26);
+            }
+    
+            .labler-description {
+                font-size: calc(100vh / 45);
+            }
+    
+            .labler-documentation-button {
+                div {
+                    width: calc(100vw / 4);
+                    height: calc(100vh / 20);
+            
+                    span {
+                        font-size: calc(100vh / 55);
+                        padding-top: calc(100vh / 70);
+                    }
+                }
+            }
         }
-    }
-
-    .labler-screenshot {
-        width: 350px;
-        height: 220px;
-        left: calc(100vw - 92.5%);
-        top: 600px;
-    }
-
-    .labler-boxes {
-        height: 500px;
-        width: 100%;
-        z-index: 3;
-        display: block !important;
-        grid-template-columns: 1fr;
-
-        .labler-info-box {
-            width: 230px;
-            height: 250px;
-            margin: 50px auto;
-        }
-    }
-
-    .polygon-1 {
-        height: 334.87px;
-        top: 1600px;
-    }
-    
-    .polygon-2 {
-        left: 90%;
-        top: 1284.32px;
-    }
-    
-    .polygon-3 {
-        left: 300px;
-        top: 1300.08px;
-    }
-    
-    .polygon-4 {
-        top: 1351.87px;
-    }
-
-    .vector-1 {
-        position: absolute;
-        left: -200px;
-        top: 0px;
-        width: 1868.11px;
-        height: 863.7px;
-    }
-
-    .labler-box-background {
-        margin-top: -700px;
     }
 }

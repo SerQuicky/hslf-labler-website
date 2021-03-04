@@ -7,10 +7,19 @@ import { Component, HostListener } from '@angular/core';
 })
 export class AppComponent {
   title = 'Labler';
+  public smallScreen: boolean = false;
 
-  constructor() {}
+  constructor() {
+    this.smallScreen = window.innerWidth < 1200;
+  }
 
   public openLink(url: string): void {
     window.open(url, '_blank');
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event) {
+    alert(window.innerWidth);
+    this.smallScreen = window.innerWidth < 1200;
   }
 }

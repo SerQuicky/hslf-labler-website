@@ -1,0 +1,325 @@
+.labler-boxes {
+    height: calc(100vh / 1.55);
+    display: grid;
+    width: 100%;
+    grid-template-columns: 10% 1fr 1fr 1fr 10%;
+    z-index: 3;
+
+    .labler-info-box {
+        width: calc(100vw / 6);
+        height: calc(100vh / 5);
+        display: grid;
+        grid-template-rows: 1fr 2fr 1fr;
+
+        background: #ffffff;
+        box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.15);
+        border-radius: 30px;
+
+        div {
+            span {
+                padding-top: calc(100vh / 50);
+                display: block;
+                padding-left: 30px;
+                padding-right: 30px;
+                text-align: left;
+            }
+        }
+
+        .box-header {
+            span {
+                color: #313131;
+                font-weight: bold;
+                font-size: calc(100vh / 50);
+            }
+        }
+
+        .box-description {
+            span {
+                color: #404040;
+                font-weight: normal;
+                font-size: calc(100vh / 75);
+            }
+        }
+
+        .box-button {
+            width: calc(100vw / 14);
+            height: calc(100vh / 30);
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+            border-radius: 23px;
+            margin-left: 30px;
+
+            span {
+                color: #fafafc;
+                font-weight: normal;
+                font-size: calc(100vh / 80);
+                padding-top: calc(100vh / 105);
+                padding-left: 0px;
+                padding-right: 0px;
+                text-align: center;
+            }
+        }
+    }
+
+    .first-box {
+        grid-area: 1 / 2 / 2 / 3;
+        margin: 25% auto;
+
+        .box-button {
+            background: #ff3364;
+        }
+    }
+
+    .second-box {
+        grid-area: 1 / 3 / 2 / 4;
+        margin: 50% auto;
+
+        .box-button {
+            background: #ff9533;
+        }
+    }
+
+    .third-box {
+        grid-area: 1 / 4 / 2 / 5;
+        margin: 75% auto;
+
+        .box-button {
+            background: #3733ff;
+        }
+    }
+
+    .labler-box-background {
+        grid-area: 1 / 1 / 2 / 6;
+
+        img {
+            width: 600px;
+            height: 400px;
+            display: block;
+            margin: 10% auto;
+        }
+    }
+}
+
+//                        HD-Laptop-Layout
+// ----------------------------------------------------------------
+
+@media (min-width: 1400px) and (max-width: 1500px) {}
+
+//                        MD-Laptop-Layout
+// ---------------------------------------------------------------- 
+
+@media (min-width: 1280px) and (max-width: 1400px) {}
+
+//                        Tablet-Layouts
+// ----------------------------------------------------------------
+
+@media (min-width: 1024px) and (max-width: 1366px) and (orientation: landscape) {
+    .labler-boxes {
+        height: calc(100vh / 1.55);
+        grid-template-columns: 0% 1fr 1fr 1fr 0%;
+        z-index: 3;
+    
+        .labler-info-box {
+            width: calc(100vw / 5);
+            height: calc(100vh / 4.5);
+            box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.15);
+            grid-template-rows: 1fr 2fr 1fr;
+    
+            div {
+                span {
+                    padding-top: calc(100vh / 50);
+                    padding-left: 30px;
+                    padding-right: 30px;
+                }
+            }
+    
+            .box-header {
+                span {
+                    font-size: calc(100vh / 50);
+                }
+            }
+    
+            .box-description {
+                span {
+                    font-size: calc(100vh / 75);
+                }
+            }
+    
+            .box-button {
+                width: calc(100vw / 11);
+                height: calc(100vh / 30);
+                border-radius: 23px;
+                margin-left: 30px;
+    
+                span {
+                    font-size: calc(100vh / 80);
+                    padding-top: calc(100vh / 105);
+                }
+            }
+        }
+    
+        .labler-box-background {
+            grid-area: 1 / 1 / 2 / 6;
+    
+            img {
+                width: 600px;
+                height: 400px;
+                display: block;
+                margin: 10% auto;
+            }
+        }
+    }
+}
+
+@media (min-height: 1024px) and (max-height: 1366px) and (orientation: portrait) {
+    .labler-boxes {
+        height: calc(100vh / 1.55);
+        grid-template-columns: 0% 1fr 1fr 1fr 0%;
+        z-index: 3;
+    
+        .labler-info-box {
+            width: calc(100vw / 3.5);
+            height: calc(100vh / 4.5);
+            box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.15);
+            grid-template-rows: 1fr 3fr 2fr;
+    
+            div {
+                span {
+                    padding-top: calc(100vh / 50);
+                    padding-left: 30px;
+                    padding-right: 30px;
+                }
+            }
+    
+            .box-header {
+                span {
+                    font-size: calc(100vh / 50);
+                }
+            }
+    
+            .box-description {
+                span {
+                    font-size: calc(100vh / 75);
+                }
+            }
+    
+            .box-button {
+                width: calc(100vw / 6);
+                height: calc(100vh / 30);
+                margin-left: 30px;
+    
+                span {
+                    font-size: calc(100vh / 80);
+                    padding-top: calc(100vh / 105);
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    .labler-boxes {
+        height: calc(100vh / 1.55);
+        grid-template-columns: 0% 1fr 1fr 1fr 0%;
+        z-index: 3;
+    
+        .labler-info-box {
+            width: calc(100vw / 4);
+            height: calc(100vh / 4);
+            box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.15);
+            grid-template-rows: 1fr 2fr 1fr;
+    
+            div {
+                span {
+                    padding-top: calc(100vh / 50);
+                    padding-left: 30px;
+                    padding-right: 30px;
+                }
+            }
+    
+            .box-header {
+                span {
+                    font-size: calc(100vh / 45);
+                }
+            }
+    
+            .box-description {
+                span {
+                    font-size: calc(100vh / 60);
+                }
+            }
+    
+            .box-button {
+                width: calc(100vw / 6);
+                height: calc(100vh / 30);
+                margin-left: 30px;
+    
+                span {
+                    font-size: calc(100vh / 80);
+                    padding-top: calc(100vh / 105);
+                }
+            }
+        }
+    }
+}
+
+@media (min-height: 768px) and (max-height: 1024px) and (orientation: portrait) {
+    .labler-boxes {
+        height: 800px;
+        display: grid;
+        width: 100%;
+        grid-template-columns: 0% 1fr 1fr 1fr 0%;
+        z-index: 3;
+
+        .labler-info-box {
+            width: 230px;
+            height: 250px;
+        }
+    }
+}
+
+//                        Mobile-Layouts
+// ----------------------------------------------------------------
+
+@media only screen and (min-width: 414px) and (max-width: 767px) and (orientation: portrait) {
+    .labler-boxes {
+        height: 500px;
+        width: 100%;
+        z-index: 3;
+        display: block !important;
+        grid-template-columns: 1fr;
+
+        .labler-info-box {
+            width: 275px;
+            height: 275px;
+            margin: 50px auto;
+
+            .box-header {
+                span {
+                    font-size: calc(100vh / 35);
+                }
+            }
+    
+            .box-description {
+                span {
+                    font-size: calc(100vh / 45);
+                }
+            }
+    
+            .box-button {
+                width: calc(100vw / 3.5);
+                height: calc(100vh / 20);
+                margin-left: 30px;
+    
+                span {
+                    font-size: calc(100vh / 55);
+                    padding-top: calc(100vh / 80);
+                }
+            }
+        }
+    }
+
+
+    .labler-box-background {
+        margin-top: -700px;
+    }
+}
